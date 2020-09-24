@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Sample</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=divice-width,initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+	<style type="text/css">
+		
+		.container-fluid{
+			background-color:#800000
+		    
+		}
+		span>h3{
+			color:#fff;
+		}
+        
+        .dropSubTitle{
+        	float: :left;
+        	color:#fff;
+        	padding: 25px;
+        	margin-top: 50px;
+        }
+        
+        .title{
+           font-size: 30px;
+           font-weight: bold;
+           color: #fff;
+        }
+
+        .content{
+        	font-size: 65px;
+        	font-weight: bolder;
+        	padding: 50px;
+        	padding-left: 100px;
+        	color: #ADD8E6;
+        }
+        .footerContent{
+        	color: #fff;
+        	padding-left: 100px;
+        	padding-top: 20px;
+        	padding-right: 200px;
+        	padding-bottom: 30px;
+        }
+
+
+        .signUp{
+           background-color: white;
+        }
+
+        .signUpSubtitle{
+           float: left;
+           padding-right: 10px;
+           padding-left: 50px;
+        }
+
+        .signUpTitle{
+        	margin-top: 20px;
+        }
+
+        p{
+        	float: left;
+        	font-size: 12px;
+        }
+
+        input{
+        	margin-top: 20px;
+        	margin-bottom: 20px;
+        }
+
+        .btn-light{
+        	bordder-width:1px;
+        	border-color: #98AFE7;
+        }
+
+	</style>
+	<div class="container"> 
+		<div class="row">
+			<div class="col-md-8">
+				<div class="container-fluid">
+					<span class="title">Dropbox</span>
+					<span class="dropSubTitle">For Teams</span>
+					<span class="dropSubTitle">For Individuals</span>
+					<div class="content">
+				    	Put your creative energy to work, with Dropbox
+					</div>
+					<div class="footerContent">
+						Dropbox is a modern workspace designed to reduce busy work-so you can focus on the things that matter
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-md-4">
+				<div class="container-fluid signUp">
+					<span class="signUpSubtitle">Sign In</span>
+					<span class="signUpSubtitle">Download</span>
+                    <br/> 
+					<h4 class="signUpTitle">Sign Up</h4>
+					<p>Or sign into your account</p>
+
+					<form action="#"> 
+					<input type="text" name="First Name" id="firstName" class="form-control" placeholder="First Name">
+					<input type="text" name="Last Name" id="lastName" class="form-control" placeholder="Last Name">
+					<input type="email" name="Email" id="email" class="form-control" placeholder="Email">
+					<input type="password" name="Password" id="password" class="form-control" placeholder="Password">
+					<p>This page is protected by reCAPTCHA and subject to the Google Privacy Policy and Terms of Service</p>
+
+				</form>
+
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox"  class="custom-control-input" id="termsService" > 
+					<label class="custom-control-label" for="termsService">
+						I aggree to the Dropbox Terms	
+					</label>
+				
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<button type="button" class="btn btn-primary btn-block">Sign Up</button><br/>
+					</div>
+					<div class="col-md-12">
+						<button type="button" class="btn btn-light btn-block">Sign Up with Google</button>
+					</div>
+				</div>	
+
+				
+				
+			</div>
+
+				
+         </div>
+
+	</div>
+		
+
+		
+</div>
+	
+
+</body>
+</html>
