@@ -44,12 +44,7 @@
 	</style>
 	<script type="text/javascript">
 
-		var form = document.getElementById("calculateForm");
-        function handleForm(event) { 
-        	event.preventDefault(); 
-        } 
-        form.addEventListener('submit', handleForm);
-
+		
 		function calculate(){
 
 			var productPrice = document.getElementById("productPrice").value;
@@ -63,6 +58,7 @@
 				else{
 
 					if(isNaN(productPrice)){
+						alert(productPrice);
 						throw "Err2";	
 					}
 					else{
@@ -120,7 +116,7 @@
 		
 		
 	</script>
-	<form id="calculateForm">
+	<form id="calculateForm" onsubmit="calculate();return false";>
 	<div class="container">
 		<div class="container-fluid mainContent">
 			<p class="h3 heading">Discount Price Calculation</p>
@@ -156,7 +152,7 @@
 
 		<div class="row">
 			<div class="col-md-6">
-				<button type="button" class="btn btn-primary btnCalculate" id="calculateDiscountPrice" onclick="calculate()">Calculate</button>
+				<button type="submit" class="btn btn-primary btnCalculate" id="calculateDiscountPrice">Calculate</button>
 			</div>
 			<div class="col-md-6">
 				<button type="button" class="btn btn-primary btnClear" name="reset_form" onclick="this.form.reset();">Clear</button>
