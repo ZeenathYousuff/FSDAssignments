@@ -44,6 +44,12 @@
 	</style>
 	<script type="text/javascript">
 
+		var form = document.getElementById("calculateForm");
+        function handleForm(event) { 
+        	event.preventDefault(); 
+        } 
+        form.addEventListener('submit', handleForm);
+
 		function calculate(){
 
 			var productPrice = document.getElementById("productPrice").value;
@@ -114,7 +120,7 @@
 		
 		
 	</script>
-	<form>
+	<form id="calculateForm">
 	<div class="container">
 		<div class="container-fluid mainContent">
 			<p class="h3 heading">Discount Price Calculation</p>
