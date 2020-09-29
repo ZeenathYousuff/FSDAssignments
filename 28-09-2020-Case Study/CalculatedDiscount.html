@@ -35,8 +35,8 @@
 			float: right;
 		}
 
-		input{
-			color: black;
+		.title{
+			color: #15317E;
 		}
 
 
@@ -50,7 +50,6 @@
 			var productPrice = document.getElementById("productPrice").value;
 			var productType = document.getElementById("productType").value;
 
-			
 			try{
 				if(productPrice == ""){
 					throw "Err1";
@@ -58,7 +57,6 @@
 				else{
 
 					if(isNaN(productPrice)){
-						alert(productPrice);
 						throw "Err2";	
 					}
 					else{
@@ -105,24 +103,27 @@
 					document.getElementById("validationMessage") 
                               .innerHTML = "Price cannot be empty";
 				}
-				else{
+				else if(Error == "Err2"){
 					
 					document.getElementById("validationMessage") 
                               .innerHTML = "Product Price should be numeric";
 				}
+				else{
+					document.getElementById("validationMessage") 
+                              .innerHTML = "";
+					console.log(Error);
+				}
 			}
 			
 		}
-		
-		
 	</script>
 	<form id="calculateForm" onsubmit="calculate();return false";>
 	<div class="container">
-		<div class="container-fluid mainContent">
-			<p class="h3 heading">Discount Price Calculation</p>
+		
+		<p class="h3 heading">Discount Price Calculation</p>
 		
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-3 title">
 				<label >Product Price</label>
 			</div>
 			<div class="col-md-6">	
@@ -135,7 +136,7 @@
 		</div>
 
 		<div class="row productType">
-			<div class="col-md-3">
+			<div class="col-md-3 title">
 				<label >Product Type</label>
 			</div>
 			<div class="col-md-6 input-group">	
@@ -159,8 +160,7 @@
 			</div>
 		</div>
 
-			
-		</div>
+		
 		
 	</div>
 </form>
