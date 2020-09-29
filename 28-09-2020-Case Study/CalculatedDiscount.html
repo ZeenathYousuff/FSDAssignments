@@ -117,53 +117,51 @@
 			
 		}
 	</script>
-	<form id="calculateForm" onsubmit="calculate();return false";>
+	
 	<div class="container">
-		
-		<p class="h3 heading">Discount Price Calculation</p>
-		
-		<div class="row">
-			<div class="col-md-3 title">
-				<label >Product Price</label>
+		<form id="calculateForm" onsubmit="calculate();return false";>
+			<p class="h3 heading">Discount Price Calculation</p>
+			
+			<div class="row">
+				<div class="col-md-3 title">
+					<label >Product Price</label>
+				</div>
+				<div class="col-md-6">	
+					<input type="text" class="form-control" id="productPrice" name="productPrice" min="0.00" max="100000.00" step="0.01">
+				</div>
+				<div class="col-md-3">	
+					<p id="validationMessage"></p>
+				</div>
+			
 			</div>
-			<div class="col-md-6">	
-				<input type="text" class="form-control" id="productPrice" name="productPrice" min="0.00" max="100000.00" step="0.01">
-			</div>
-			<div class="col-md-3">	
-				<p id="validationMessage"></p>
-			</div>
-		
-		</div>
 
-		<div class="row productType">
-			<div class="col-md-3 title">
-				<label >Product Type</label>
+			<div class="row productType">
+				<div class="col-md-3 title">
+					<label >Product Type</label>
+				</div>
+				<div class="col-md-6 input-group">	
+					<div class="input-group mb-3">
+	  					<select class="custom-select" id="productType">
+	  						<option selected>Choose...</option>
+	    					<option value="1">Electronics</option>
+	    					<option value="2">Toys</option>
+	    					<option value="3">Apparels</option>
+	  					</select>
+	  				</div>
+				</div>
 			</div>
-			<div class="col-md-6 input-group">	
-				<div class="input-group mb-3">
-  					<select class="custom-select" id="productType">
-  						<option selected>Choose...</option>
-    					<option value="1">Electronics</option>
-    					<option value="2">Toys</option>
-    					<option value="3">Apparels</option>
-  					</select>
-  				</div>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="col-md-6">
-				<button type="submit" class="btn btn-primary btnCalculate" id="calculateDiscountPrice">Calculate</button>
+			<div class="row">
+				<div class="col-md-6">
+					<button type="submit" class="btn btn-primary btnCalculate" id="calculateDiscountPrice">Calculate</button>
+				</div>
+				<div class="col-md-6">
+					<button type="button" class="btn btn-primary btnClear" name="reset_form" onclick="this.form.reset();">Clear</button>
+				</div>
 			</div>
-			<div class="col-md-6">
-				<button type="button" class="btn btn-primary btnClear" name="reset_form" onclick="this.form.reset();">Clear</button>
-			</div>
-		</div>
-
-		
-		
+		</form>
 	</div>
-</form>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
