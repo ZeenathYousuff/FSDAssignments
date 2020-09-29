@@ -48,6 +48,7 @@
 
 			var productPrice = document.getElementById("productPrice").value;
 			var productType = document.getElementById("productType").value;
+
 			
 			try{
 				if(productPrice == ""){
@@ -56,35 +57,43 @@
 				else{
 
 					if(isNaN(productPrice)){
-					 	throw "Err2";	
+						throw "Err2";	
 					}
 					else{
 
-						var discountPerc = 0;
+						document.getElementById("validationMessage") 
+                              .innerHTML = "";
 
-						if(productType == "1"){
+						if(productType == "Choose..."){
+					 	  console.log("Error");
+					    }
+					    else{
+						    var discountPerc = 0;
 
-							discountPerc = 25;
+							if(productType == "1"){
 
-						}
-						else if(productType == "2")
-						{
-							discountPerc = 10;
-						}
-						else if(productType == "3"){
-							discountPerc = 50;
+								discountPerc = 25;
 
-						}
-						else{
-							discountPerc = 0;
+							}
+							else if(productType == "2")
+							{
+								discountPerc = 10;
+							}
+							else if(productType == "3"){
+								discountPerc = 50;
 
-						}
+							}
+							else{
+								discountPerc = 0;
 
-						var discount = productPrice - (productPrice*(discountPerc/100));
+							}
+
+							var discount = productPrice - (productPrice*(discountPerc/100));
+							window.localStorage.setItem("Discount", discount);
+				            window.location.replace("FinalPrice.html");
+					    }
+
 						
-						window.localStorage.setItem("Discount", discount);
-			            alert(window.localStorage.getItem("Discount"));
-					    window.location.replace("FinalPrice.html");
 					}
 				}	
 			}
@@ -141,7 +150,7 @@
 
 		<div class="row">
 			<div class="col-md-6">
-				<button type="button" class="btn btn-primary btnCalculate" id="calculateDiscountPrice" onclick="calculate();">Calculate</button>
+				<button type="button" class="btn btn-primary btnCalculate" id="calculateDiscountPrice" onclick="calculate()">Calculate</button>
 			</div>
 			<div class="col-md-6">
 				<button type="button" class="btn btn-primary btnClear" name="reset_form" onclick="this.form.reset();">Clear</button>
